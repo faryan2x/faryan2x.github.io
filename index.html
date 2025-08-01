@@ -6,85 +6,128 @@
     window.location.href = 'https://www.milliondollarenergy.com';
   }
 </script>
+  <link rel="canonical" href="https://www.milliondollarenergy.com/" />
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Million Dollar Energy | Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MillionDollarEnergy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f0f0f;
-      color: #fff;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
       padding: 40px 20px;
+      text-align: center;
     }
-    .avatar {
-      width: 100px;
-      height: 100px;
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
+      border: 3px solid #ffffff20;
       margin-bottom: 16px;
-      border: 2px solid #fff;
     }
+
     h1 {
-      font-size: 24px;
+      font-size: 26px;
       margin-bottom: 8px;
     }
+
     p {
-      margin-bottom: 24px;
-      color: #ccc;
-      text-align: center;
+      color: #aaa;
+      font-size: 14px;
+      margin-bottom: 32px;
       max-width: 300px;
     }
-    .link-container {
+
+    .links {
       display: flex;
       flex-direction: column;
       width: 100%;
-      max-width: 400px;
-      gap: 14px;
+      max-width: 420px;
+      gap: 16px;
     }
+
     .link {
-      text-decoration: none;
-      padding: 14px;
       background-color: #1f1f1f;
-      color: #fff;
       border: 1px solid #333;
-      text-align: center;
-      border-radius: 8px;
-      transition: all 0.2s ease-in-out;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
+
     .link:hover {
-      background-color: #333;
+      background-color: #292929;
+      transform: scale(1.03);
     }
+
+    .link i {
+      font-size: 18px;
+    }
+
     .footer {
-      margin-top: auto;
+      margin-top: 60px;
       font-size: 12px;
       color: #666;
-      text-align: center;
-      padding-top: 40px;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 22px;
+      }
+      .link {
+        font-size: 15px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Profile Picture -->
-  <img src="https://via.placeholder.com/100" alt="Your Name" class="avatar" />
+  <!-- PROFILE -->
+  <img src="https://via.placeholder.com/120" alt="Your Image" class="profile-img" />
+  <h1>Faryan</h1>
+  <p>Building my brand. Motivating the world. Living with Million Dollar Energy.</p>
 
-  <!-- Name and Bio -->
-  <h1>Your Name</h1>
-  <p>Short description or quote here. Motivation. Branding. Your vibe.</p>
-
-  <!-- Links -->
-  <div class="link-container">
-    <a href="https://www.instagram.com/milliondollar.energy" class="link" target="_blank">Instagram</a>
-    <a href="https://www.youtube.com/@milliondollar.energy" class="link" target="_blank">YouTube</a>
-    <a href="https://www.tiktok.com/@milliondollarenergy" class="link" target="_blank">TikTok</a>
+  <!-- LINKS -->
+  <div class="links">
+    <a href="https://www.instagram.com/yourhandle" class="link" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.tiktok.com/@yourhandle" class="link" target="_blank">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+    <a href="https://www.youtube.com/@yourhandle" class="link" target="_blank">
+      <i class="fab fa-youtube"></i> YouTube
+    </a>
+    <a href="mailto:you@email.com" class="link">
+      <i class="fas fa-envelope"></i> Email Me
+    </a>
   </div>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <div class="footer">
-    © 2025 Million Dollar Energy
+    © 2025 MillionDollarEnergy
   </div>
+
+</body>
+</html>
