@@ -14,15 +14,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      overflow-x: hidden;
+    * {
+      box-sizing: border-box;
     }
 
     body {
+      margin: 0;
+      padding: 0;
       font-family: 'Inter', sans-serif;
       background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
       color: white;
@@ -32,20 +30,6 @@
       min-height: 100dvh;
       padding: 40px 20px;
       text-align: center;
-    }
-
-    @media (max-width: 480px) {
-      body {
-        padding: 20px 16px;
-      }
-
-      h1 {
-        font-size: 22px;
-      }
-
-      .link {
-        font-size: 15px;
-      }
     }
 
     .profile-img {
@@ -62,25 +46,12 @@
       text-shadow: 0 0 4px white, 0 0 16px rgba(255, 255, 255, 0.5);
     }
 
+
     p {
       color: #aaa;
       font-size: 14px;
       margin-bottom: 32px;
-      max-width: 320px;
-    }
-
-    .rgb-glow {
-      animation: rgbFlash 6s infinite linear;
-      font-weight: 700;
-    }
-
-    @keyframes rgbFlash {
-      0%   { color: red;     text-shadow: 0 0 8px red; }
-      20%  { color: orange;  text-shadow: 0 0 8px orange; }
-      40%  { color: yellow;  text-shadow: 0 0 8px yellow; }
-      60%  { color: lime;    text-shadow: 0 0 8px lime; }
-      80%  { color: cyan;    text-shadow: 0 0 8px cyan; }
-      100% { color: red;     text-shadow: 0 0 8px red; }
+      max-width: 300px;
     }
 
     .links {
@@ -122,6 +93,29 @@
       font-size: 12px;
       color: #666;
     }
+
+    .rgb-glow {
+      animation: rgbFlash 3s infinite linear;
+      animation: rgbFlash 2s infinite linear;
+      font-weight: 700;
+    }
+
+    @keyframes rgbFlash {
+      0%   { color: red;     text-shadow: 0 0 8px red; }
+      25%  { color: orange;  text-shadow: 0 0 8px orange; }
+      50%  { color: lime;    text-shadow: 0 0 8px lime; }
+      75%  { color: cyan;    text-shadow: 0 0 8px cyan; }
+      100% { color: red;     text-shadow: 0 0 8px red; }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 22px;
+      }
+      .link {
+        font-size: 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -129,11 +123,7 @@
   <!-- PROFILE -->
   <img src="https://via.placeholder.com/120" alt="Your Image" class="profile-img" />
   <h1>Hey, I'm Faryan.</h1>
-  <p>
-    Building my brand. Motivating the world. Living with 
-    <span class="rgb-glow">Million Dollar Energy</span>.<br />
-    <span style="display: inline-block; margin-top: 10px;">Check out my socials here 👇🏽</span>
-  </p>
+  <p>Building my brand. Motivating the world. Living with <span class="rgb-glow">Million Dollar Energy</span>.</p>
 
   <!-- LINKS -->
   <div class="links">
@@ -159,7 +149,7 @@
 
   <!-- FOOTER -->
   <footer>
-    © 2025 MillionDollarEnergy
+    © 2025 Million Dollar Energy
   </footer>
 
 </body>
