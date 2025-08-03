@@ -97,27 +97,28 @@
       color: #111;
       border: 1px solid #ccc;
       font-weight: 600;
-      overflow: hidden;
       z-index: 1;
+      overflow: hidden;
     }
 
     /* The animated glow ring */
     .link.ko-fi::before {
       content: '';
       position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
+      top: -25%;
+      left: -25%;
+      width: 150%;
+      height: 150%;
       background: conic-gradient(
-        from 0deg,
-        rgba(255, 255, 255, 0.25),
-        rgba(255, 255, 255, 0.75),
-        rgba(255, 255, 255, 0.25)
+        rgba(255, 255, 255, 0) 0deg,
+        rgba(255, 255, 255, 0.7) 90deg,
+        rgba(255, 255, 255, 0) 180deg,
+        rgba(255, 255, 255, 0.7) 270deg,
+        rgba(255, 255, 255, 0) 360deg
       );
-      animation: rotateGlow 4s linear infinite;
+      animation: spinGlow 4s linear infinite;
+      filter: blur(40px);
       z-index: -1;
-      filter: blur(12px);
     }
 
     
@@ -131,7 +132,7 @@
       z-index: 1;
     }
     
-    @keyframes rotateGlow {
+    @keyframes spinGlow {
       0% {
         transform: rotate(0deg);
       }
