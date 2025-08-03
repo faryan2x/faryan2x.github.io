@@ -92,19 +92,50 @@
     }
 
     .link.ko-fi {
+      position: relative;
       background-color: white;
       color: #111;
       border: 1px solid #333;
       font-weight: 600;
-      text-shadow: none;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.25); /* Glow effect */
-      transition: 0.3s ease;
+      overflow: hidden;
+      z-index: 1;
     }
 
+    /* The animated glow ring */
+    .link.ko-fi::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(
+        from 0deg,
+        white,
+        transparent,
+        white,
+        transparent,
+        white
+      );
+      animation: rotateGlow 2s linear infinite;
+      z-index: 0;
+      filter: blur(12px);
+      opacity: 0.7;
+    }
+    
     .link.ko-fi:hover {
       background-color: #f2f2f2;
       transform: scale(1.03);
-      box-shadow: 0 0 14px rgba(255, 255, 255, 0.35); /* Slightly more glow on hover */
+      box-shadow: 0 0 24px rgba(255, 255, 255, 0.4); /* More glow on hover */
+    }
+    .link.ko-fi span {
+      position: relative;
+      z-index: 1;
+    }
+    
+    @keyframes rotateGlow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
     footer {
@@ -148,7 +179,7 @@
   <!-- LINKS -->
   <div class="links">
     <a href="https://www.ko-fi.com/milliondollarenergy" class="link ko-fi" target="_blank">
-      ☕️ Ko-fi
+      <span>☕ Ko-fi</span>
     </a>
     <a href="https://www.youtube.com/@milliondollar.energy" class="link" target="_blank">
       <i class="fab fa-youtube"></i> YouTube
