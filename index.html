@@ -91,18 +91,20 @@
       font-size: 18px;
     }
 
-    .link.ko-fi {
+        .link.ko-fi {
       background-color: white;
       color: #111;
-      border: 1px solid #555;
-      text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+      border: 1px solid #333;
       font-weight: 600;
+      text-shadow: none;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.25); /* Glow effect */
+      transition: 0.3s ease;
     }
 
     .link.ko-fi:hover {
-      background-color: #f7f7f7;
+      background-color: #f2f2f2;
       transform: scale(1.03);
+      box-shadow: 0 0 14px rgba(255, 255, 255, 0.35); /* Slightly more glow on hover */
     }
 
     footer {
