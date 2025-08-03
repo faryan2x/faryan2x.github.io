@@ -92,54 +92,45 @@
     }
 
     .link.ko-fi {
-      position: relative;
-      background-color: #fff;
-      color: #111;
-      border: 1px solid #ccc;
-      font-weight: 600;
-      z-index: 1;
-      overflow: hidden;
-    }
-
-    /* The animated glow ring */
-    .link.ko-fi::before {
-      content: '';
-      position: absolute;
-      top: -25%;
-      left: -25%;
-      width: 150%;
-      height: 150%;
-      background: conic-gradient(
-        rgba(255, 255, 255, 0) 0deg,
-        rgba(255, 255, 255, 0.7) 90deg,
-        rgba(255, 255, 255, 0) 180deg,
-        rgba(255, 255, 255, 0.7) 270deg,
-        rgba(255, 255, 255, 0) 360deg
-      );
-      animation: spinGlow 4s linear infinite;
-      filter: blur(40px);
-      z-index: -1;
-    }
-
-    
-    .link.ko-fi:hover {
-      background-color: #f2f2f2;
-      transform: scale(1.03);
-      box-shadow: 0 0 24px rgba(255, 255, 255, 0.4); /* More glow on hover */
-    }
-    .link.ko-fi span {
-      position: relative;
-      z-index: 1;
-    }
-    
-    @keyframes spinGlow {
-      0% {
-        transform: rotate(0deg);
+        position: relative;
+        background-color: #fff;
+        color: #111;
+        border: 2px solid #ccc;
+        font-weight: 600;
+        z-index: 1;
+        overflow: visible; /* Important to allow the glow outside */
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
       }
-      100% {
-        transform: rotate(360deg);
+    
+      .link.ko-fi::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+        background: conic-gradient(
+          rgba(255, 255, 255, 0) 0deg,
+          rgba(255, 255, 255, 0.6) 90deg,
+          rgba(255, 255, 255, 0) 180deg,
+          rgba(255, 255, 255, 0.6) 270deg,
+          rgba(255, 255, 255, 0) 360deg
+        );
+        border-radius: 16px;
+        animation: spinGlow 4s linear infinite;
+        filter: blur(24px);
+        z-index: -1;
       }
-    }
+    
+      .link.ko-fi span {
+        position: relative;
+        z-index: 1;
+      }
+    
+      @keyframes spinGlow {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
 
     footer {
       margin-top: auto;
