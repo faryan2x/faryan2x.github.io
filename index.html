@@ -93,9 +93,9 @@
 
     .link.ko-fi {
       position: relative;
-      background-color: white;
+      background-color: #fff;
       color: #111;
-      border: 1px solid #333;
+      border: 1px solid #ccc;
       font-weight: 600;
       overflow: hidden;
       z-index: 1;
@@ -111,17 +111,15 @@
       height: 200%;
       background: conic-gradient(
         from 0deg,
-        white,
-        transparent,
-        white,
-        transparent,
-        white
+        rgba(255, 255, 255, 0.25),
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0.25)
       );
-      animation: rotateGlow 2s linear infinite;
-      z-index: 0;
+      animation: rotateGlow 4s linear infinite;
+      z-index: -1;
       filter: blur(12px);
-      opacity: 0.7;
     }
+
     
     .link.ko-fi:hover {
       background-color: #f2f2f2;
@@ -134,8 +132,12 @@
     }
     
     @keyframes rotateGlow {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     footer {
