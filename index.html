@@ -126,34 +126,28 @@
       z-index: 1;
     }
 
-    .membership-btn {
-      flex-direction: column;
-      padding: 24px 20px;
-      height: auto;
-      gap: 12px;
-      border: 1px solid #ccc;
+    .link.membership {
       background-color: #fff;
       color: #111;
       font-weight: 600;
-      text-decoration: none;
       display: flex;
       align-items: center;
-      justify-content: center;
-      border-radius: 12px;
-      margin-bottom: 32px;
-      max-width: 280px;
+      justify-content: flex-start;
+      gap: 16px;
+      padding: 14px 20px;
+      border: 1px solid #ccc;
     }
 
-    .membership-btn:hover {
+    .link.membership:hover {
       background-color: #f2f2f2;
-      box-shadow: 0 0 24px rgba(255, 255, 255, 0.4);
       transform: scale(1.03);
+      box-shadow: 0 0 24px rgba(255, 255, 255, 0.4);
     }
 
-    .membership-img {
-      width: 80px;
-      height: 80px;
-      border-radius: 12px;
+    .link.membership img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
       object-fit: cover;
     }
 
@@ -198,12 +192,6 @@
 </head>
 <body>
 
-  <!-- MEMBERSHIP BUTTON -->
-  <a href="http://ko-fi.com/milliondollarenergy/tiers" class="membership-btn" target="_blank">
-    <img src="https://storage.ko-fi.com/cdn/useruploads/display/your-membership-icon.png" alt="Membership" class="membership-img">
-    <span>Join the Membership</span>
-  </a>
-
   <!-- PROFILE -->
   <img src="https://via.placeholder.com/120" alt="Your Image" class="profile-img" />
   <h1>Hey, I'm Faryan.</h1>
@@ -211,6 +199,13 @@
 
   <!-- LINKS -->
   <div class="links">
+
+    <!-- MEMBERSHIP BUTTON -->
+    <a href="https://ko-fi.com/milliondollarenergy/tiers" class="link membership" target="_blank">
+      <img src="mdevaulticon.png" alt="Membership Icon">
+      <span>Join the Membership</span>
+    </a>
+
     <a href="https://www.ko-fi.com/milliondollarenergy" class="link ko-fi" target="_blank">
       <span>☕ Ko-fi</span>
     </a>
@@ -228,3 +223,22 @@
     </a>
     <a href="mailto:faryan@milliondollarenergy.com" class="link">
       <i class="fas fa-envelope"></i> Email Me
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Million Dollar Energy
+  </footer>
+
+  <!-- REDIRECT -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.location.hostname === 'faryan2x.github.io') {
+        window.location.href = 'https://www.milliondollarenergy.com';
+      }
+    });
+  </script>
+
+</body>
+</html>
