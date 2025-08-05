@@ -31,6 +31,35 @@
       padding: 40px 20px;
       text-align: center;
     }
+    
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1; /* Behind everything */
+    }
+    
+    .video-background video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+    
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(20, 20, 20, 0.5); /* semi-transparent gray */
+    }
 
     .profile-img {
       width: 120px;
@@ -181,7 +210,15 @@
   </style>
 </head>
 <body>
-
+  <!-- BACKGROUND -->
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="background.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+  
   <!-- PROFILE -->
   <img src="https://via.placeholder.com/120" alt="Your Image" class="profile-img" />
   <h1>Hey, I'm Faryan.</h1>
